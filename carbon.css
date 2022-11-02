@@ -13,7 +13,7 @@ body{
 /* -----Header seciotn---- */
 
 header{
-    width: 100%;
+    width: 100vw;
     top: 0;
     position:fixed;
     z-index: 999;
@@ -52,27 +52,13 @@ ul{
 .hamburger{
     width: 60px;
     height: 60px;
-    margin: auto 1% auto auto;
+    margin: auto;
+    margin-right: 7vw;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     background-color: #fafafa;
-}
-@media screen and (max-width:360px){
-    
-    .hamburger{
-        margin: unset;
-        margin-left: auto;
-        display: flex;
-    }
-    header{
-        width: unset;
-        top: 0;
-      
-        position:fixed;
-        z-index: 999;
-    }
 }
 .hamburger span,
 .hamburger span::before,
@@ -823,6 +809,7 @@ footer{
     grid-area: footer-text-1;
     flex-direction: column;
     line-height: 2;
+    margin-bottom: 100%;
 }
 .footer-text-2{
     grid-area: footer-text-2;

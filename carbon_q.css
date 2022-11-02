@@ -402,12 +402,55 @@
         width: 100%;
         margin: auto;
         grid-template-columns: 100%;
-        grid-template-rows: 115vh 60vh;
+        grid-template-rows: 170vh 60vh;
         grid-template-areas: 
         'third-container1'
         'third-container2';
     
     }
+    .third-bottom{
+        grid-area: third-bottom;
+        display: grid;
+        grid-template-areas:
+        'article1 '
+        'article2'
+        'article-bottom ' ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,45vh) 20vh;
+        justify-content: space-evenly;
+        align-items: center;
+        outline: 2px solid red;
+    }
+    .article1{
+        grid-area: article1;
+        border-radius: 20px;
+        margin-left: unset;
+        width: 90%;
+        margin-inline: 5%;
+        background-color: #fff;
+    }
+    .article2{
+        grid-area: article2;
+        border-radius: 20px;
+        background-color: #fff;
+        margin-right: unset;
+        margin-inline: 5%;
+    }
+    .third-container2{
+        grid-area: third-container2;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: #6e58e2;
+    }
+    .third-container2 .sub-cont-1 h5{
+        width: max-content;
+        margin: auto;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+
     footer{
         width: 100%;
          display: grid;
@@ -415,7 +458,7 @@
          'top-footer'
          'bottom-footer';
          grid-template-columns: 100%;
-         grid-template-rows: 110vh 300px;
+         grid-template-rows: 110vh 90vh;
          background-color: #f3f4f5;
      }
     .top-footer{
@@ -459,4 +502,115 @@
         margin-top: 140px;
         margin-left: auto;
     }
+}
+@media  screen and (max-width:280px){
+    
+    header{
+        width: 125vw;
+        top: 0;
+        position:fixed;
+        z-index: 999;
+    }
+    .hamburger{
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        margin-right: unset;
+        display: flex;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh 20vh 40vh ;
+        grid-template-areas: 
+        'left-main '
+        'lower-main'
+        'right-main';
+        margin-top: 150px;
+        width: 110vw;
+        margin-inline: 10%;
+        outline: 2px solid red;
+    }
+    .second-section{
+        outline: 2px solid red;
+        width: 110vw;
+        display: grid;
+        margin-inline: 10%;
+        grid-template-areas: 
+        'text-1' 'mobile-1'
+        'text-2' 'mobile-2'
+        'text-3' 'mobile-3'
+        'text-4' 'mobile-4'
+        'text-5' 'mobile-5'
+        'text-6' 'mobile-6'
+        'text-7 ''text-8 '
+        'text-9 ';
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12,350px) 70px 75vh 60vh;
+        margin-top:10% ;
+        
+    }
+    .third-section{
+        display: grid;
+        width: 100%;
+        margin: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 170vh 60vh;
+        grid-template-areas: 
+        'third-container1'
+        'third-container2';
+    
+    }
+    .third-bottom{
+        grid-area: third-bottom;
+        display: grid;
+        grid-template-areas:
+        'article1 '
+        'article2'
+        'article-bottom ' ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,45vh) 20vh;
+        justify-content: space-evenly;
+        align-items: center;
+        outline: 2px solid red;
+    }
+    .article1{
+        grid-area: article1;
+        border-radius: 20px;
+        margin-left: unset;
+        width: 90%;
+        margin-inline: 5%;
+        background-color: #fff;
+    }
+    .article2{
+        grid-area: article2;
+        border-radius: 20px;
+        background-color: #fff;
+        margin-right: unset;
+        margin-inline: 5%;
+    }
+    .third-container2{
+        grid-area: third-container2;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: #6e58e2;
+    }
+    .third-container2 .sub-cont-1 h5{
+        width: max-content;
+        margin: auto;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+    footer{
+        width: 130vw;
+         display: grid;
+         grid-template-areas: 
+         'top-footer'
+         'bottom-footer';
+         grid-template-columns: 1fr;
+         grid-template-rows: 120vh 85vh;
+         background-color: #f3f4f5;
+     }
 }
